@@ -1,13 +1,13 @@
 # Oxly NIS2 & AI Act Readiness Kit — Landing
 
-Live: **https://makashovdenis.github.io/**
+Live: **https://oxly-compliance.de**
 
-- Impressum: https://makashovdenis.github.io/impressum.html
-- Datenschutz: https://makashovdenis.github.io/datenschutz.html
-- Widerruf: https://makashovdenis.github.io/widerruf.html
-- Lizenz: https://makashovdenis.github.io/lizenz.html
+- Impressum: https://oxly-compliance.de/impressum.html
+- Datenschutz: https://oxly-compliance.de/datenschutz.html
+- Widerruf: https://oxly-compliance.de/widerruf.html
+- Lizenz: https://oxly-compliance.de/lizenz.html
 
-Custom domain `oxly-compliance.de` is not attached yet (no CNAME file), so the github.io preview keeps working until DNS is ready.
+Custom domain: `oxly-compliance.de` (www redirects via GitHub Pages). The previous preview URL is https://makashovdenis.github.io/.
 
 ## Schriftart
 
