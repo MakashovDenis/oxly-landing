@@ -1,7 +1,9 @@
-# Oxly NIS2 & AI Act Readiness Kit — Landing
+# Oxly NIS2 & AI Act Readiness Kit — Landing (source copy)
 
-Public preview of the Oxly landing page.
+Live preview is published from the user GitHub Pages site:
 
-Live: https://makashovdenis.github.io/oxly-landing/
+**https://makashovdenis.github.io/**
 
-Impressum and Datenschutz still contain placeholders (`[bitte ergänzen]`) and will be filled in later.
+Repository: https://github.com/MakashovDenis/MakashovDenis.github.io
+
+This repo also holds the landing files. GitHub Actions could not enable Pages here (`Resource not accessible by integration`), so publishing uses the `MakashovDenis.github.io` user site instead.
