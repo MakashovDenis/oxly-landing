@@ -751,6 +751,12 @@ details p {
   color: rgba(246, 243, 236, 0.45);
   font-size: 13px;
 }
+.footer-bottom a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-bottom a:hover { color: var(--ivory); }
 .disclaimer {
   max-width: 52em;
 }
@@ -920,4 +926,65 @@ details p {
   .legal { padding: 48px 0 72px; }
   .legal-dl div { grid-template-columns: 1fr; gap: 2px; }
   .form { padding: 22px 18px; }
+}
+/* Price VAT note and MoR disclosure */
+.hero-vat {
+  margin: -8px 0 16px;
+  font-size: 13.5px;
+  color: rgba(246, 243, 236, 0.78);
+  font-weight: 500;
+  line-height: 1.45;
+}
+.price-vat {
+  margin: 0 0 12px;
+  font-size: 14.5px;
+  color: var(--text-2);
+  font-weight: 500;
+  line-height: 1.45;
+}
+.mor-note {
+  margin: 0 0 22px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(246, 243, 236, 0.72);
+  max-width: 40em;
+  font-weight: 450;
+}
+.mor-note a {
+  color: var(--ivory);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.price-card .mor-note {
+  margin: 18px auto 0;
+  text-align: left;
+  max-width: 520px;
+  color: var(--text-2);
+}
+.price-card .mor-note a {
+  color: var(--navy);
+}
+.widerruf-box {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin: 8px 0 24px;
+}
+.widerruf-box p,
+.widerruf-box li {
+  color: var(--text);
+}
+.widerruf-form {
+  white-space: pre-wrap;
+  font: inherit;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.7;
+}
+.legal .stand {
+  margin-top: 8px;
+  color: var(--text-3);
+  font-size: 14px;
 }
