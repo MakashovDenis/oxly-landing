@@ -1,9 +1,8 @@
-# Oxly NIS2 & AI Act Readiness Kit — Landing (source copy)
+# Oxly NIS2 & AI Act Readiness Kit — Landing
 
-Live preview is published from the user GitHub Pages site:
+Live: **https://makashovdenis.github.io/**
 
-**https://makashovdenis.github.io/**
+- Impressum: https://makashovdenis.github.io/impressum.html
+- Datenschutz: https://makashovdenis.github.io/datenschutz.html
 
-Repository: https://github.com/MakashovDenis/MakashovDenis.github.io
-
-This repo also holds the landing files. GitHub Actions could not enable Pages here (`Resource not accessible by integration`), so publishing uses the `MakashovDenis.github.io` user site instead.
+Custom domain `oxly-compliance.de` is not attached yet (no CNAME file), so the github.io preview keeps working until DNS is ready.
