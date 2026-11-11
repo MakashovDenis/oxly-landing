@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NIS2-Schnellcheck: Betrifft Sie NIS2? | Oxly</title>
+  <meta name="description" content="Kostenloser NIS2-Schnellcheck für den deutschen Mittelstand. Läuft nur in Ihrem Browser, es werden keine Angaben übermittelt. Orientierung, keine Rechtsberatung.">
+  <meta property="og:title" content="NIS2-Schnellcheck: Betrifft Sie NIS2? | Oxly">
+  <meta property="og:description" content="Kostenloser, rein clientseitiger Schnellcheck zur vorläufigen Einordnung nach dem BSIG. Orientierung, keine Rechtsberatung.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1A2B'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='16' fill='%23F6F3EC'%3EO%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+
+  <header class="header no-print">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Oxly – zur Startseite">
+        <svg class="logo-mark" viewBox="0 0 28 28" aria-hidden="true">
+          <rect width="28" height="28" rx="6" fill="#0E1A2B"/>
+          <rect x="6.5" y="6.5" width="15" height="15" rx="3" fill="none" stroke="#F6F3EC" stroke-width="1.6"/>
+          <path d="M10 17.2c1.1 1.3 2.5 2 4 2s2.9-.7 4-2" fill="none" stroke="#C4A35A" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-word">Oxly</span>
+      </a>
+      <nav class="nav" aria-label="Seitennavigation">
+        <a href="index.html#inhalt">Inhalt</a>
+        <a href="index.html#fuer-wen">Für wen</a>
+        <a href="nis2-check.html" aria-current="page">NIS2-Check</a>
+        <a href="index.html#ablauf">Ablauf</a>
+        <a href="index.html#preis">Preis</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#kontakt">Kontakt</a>
+      </nav>
+      <a class="btn btn-primary js-buy" data-buy href="https://oxly.lemonsqueezy.com/checkout/buy/932510b3-8b38-464d-8cc8-acfaef03025f">Jetzt kaufen</a>
+    </div>
+  </header>
+
+  <main id="main" class="check-page">
+    <div class="wrap check-intro">
+      <p class="section-kicker">Kostenlos · Nur in Ihrem Browser</p>
+      <h1>NIS2-Schnellcheck: Betrifft Sie NIS2?</h1>
+      <p class="lead">Sieben kurze Fragen zur vorläufigen Einordnung nach dem BSI-Gesetz (BSIG) in der Fassung des NIS2-Umsetzungsgesetzes. Der Check läuft vollständig in Ihrem Browser. Es werden keine Angaben gespeichert oder an uns oder Dritte übermittelt.</p>
+      <p class="check-disclaimer">Dieser Check dient ausschließlich der Orientierung. Er ist keine Rechtsberatung, keine verbindliche Auskunft der zuständigen Behörde und kein Ersatz für eine individuelle Prüfung (etwa anhand des amtlichen Wortlauts, verbundener Unternehmen oder Feinabgrenzungen der Anlagen). Stand der zugrunde gelegten Vorschriften: Einsichtnahme am 11. November 2026.</p>
+    </div>
+
+    <div class="wrap">
+      <form id="nis2-form" class="check-form" action="#" method="get">
+        <fieldset class="q">
+          <legend>1. Trifft einer dieser besonderen Fälle auf Ihr Unternehmen zu?</legend>
+          <p class="q-hint">Einige Einrichtungen sind unabhängig von der Größe oder nach besonderen Größenschwellen erfasst.</p>
+          <label class="choice"><input type="radio" name="special" value="kritis" required> Ja: Betreiber einer kritischen Anlage (KRITIS)</label>
+          <label class="choice"><input type="radio" name="special" value="qualified_dns_tld"> Ja: qualifizierter Vertrauensdiensteanbieter, DNS-Diensteanbieter oder Registry für Top-Level-Domains</label>
+          <label class="choice"><input type="radio" name="special" value="trust_other"> Ja: sonstiger (nicht qualifizierter) Vertrauensdiensteanbieter</label>
+          <label class="choice"><input type="radio" name="special" value="telecom"> Ja: Anbieter öffentlich zugänglicher Telekommunikationsdienste oder Betreiber öffentlicher Telekommunikationsnetze</label>
+          <label class="choice"><input type="radio" name="special" value="none"> Nein, keiner dieser Fälle</label>
+          <label class="choice"><input type="radio" name="special" value="unsure"> Unsicher / weiß ich nicht</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>2. In welchem Bereich ist Ihr Unternehmen hauptsächlich tätig?</legend>
+          <p class="q-hint">Die Listen fassen die amtlichen Anlagen zusammen; maßgebend ist der Wortlaut der jeweiligen Einrichtungsart in Anlage 1 oder 2 BSIG.</p>
+          <label class="choice"><input type="radio" name="sector" value="annex1" required> Sektor hoher Kritikalität (Anlage 1 BSIG): Energie; Transport und Verkehr (Luft, Schiene, Schifffahrt, Straße); Finanzwesen; Gesundheit; Trinkwasser oder Abwasser; digitale Infrastruktur (unter anderem Internet-Austauschknoten, DNS, TLD-Registries, Cloud-Computing, Rechenzentren, Content-Delivery-Netzwerke, Vertrauensdienste, öffentliche Telekommunikationsnetze und -dienste, Managed Services / Managed Security Services); Weltraum</label>
+          <label class="choice"><input type="radio" name="sector" value="annex2"> Sonstiger kritischer Sektor (Anlage 2 BSIG): Post- und Kurierdienste; Abfallbewirtschaftung (als Haupttätigkeit); Chemie (Herstellung und Handel, soweit erfasst); Lebensmittel (Großhandel sowie industrielle Produktion und Verarbeitung); bestimmtes verarbeitendes Gewerbe (unter anderem Medizinprodukte und In-vitro-Diagnostika, Datenverarbeitungsgeräte sowie elektronische und optische Erzeugnisse, elektrische Ausrüstungen, Maschinenbau, Kraftwagen und Kraftwagenteile, sonstiger Fahrzeugbau); Anbieter digitaler Dienste (Online-Marktplätze, Online-Suchmaschinen, Plattformen sozialer Netzwerke); Forschungseinrichtungen</label>
+          <label class="choice"><input type="radio" name="sector" value="none"> Keiner dieser Sektoren</label>
+          <label class="choice"><input type="radio" name="sector" value="unsure"> Unsicher / weiß ich nicht</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>3. Wie viele Beschäftigte hat Ihr Unternehmen?</legend>
+          <p class="q-hint">Maßgeblich sind in der Regel die Schwellen der Empfehlung 2003/361/EG, mit der Maßgabe des § 28 Abs. 4 BSIG (ohne Art. 3 Abs. 4 des Anhangs der Empfehlung). Verbundene Unternehmen können mitzählen; im Zweifel unsicher angeben.</p>
+          <label class="choice"><input type="radio" name="employees" value="under50" required> Unter 50</label>
+          <label class="choice"><input type="radio" name="employees" value="50to249"> 50 bis 249</label>
+          <label class="choice"><input type="radio" name="employees" value="250plus"> 250 oder mehr</label>
+          <label class="choice"><input type="radio" name="employees" value="unsure"> Unsicher / weiß ich nicht</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>4. Wie hoch ist der Jahresumsatz?</legend>
+          <label class="choice"><input type="radio" name="turnover" value="upto10" required> 10 Millionen Euro oder weniger</label>
+          <label class="choice"><input type="radio" name="turnover" value="over10_50"> Über 10 bis einschließlich 50 Millionen Euro</label>
+          <label class="choice"><input type="radio" name="turnover" value="over50"> Über 50 Millionen Euro</label>
+          <label class="choice"><input type="radio" name="turnover" value="unsure"> Unsicher / weiß ich nicht</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>5. Wie hoch ist die Jahresbilanzsumme?</legend>
+          <label class="choice"><input type="radio" name="balance" value="upto10" required> 10 Millionen Euro oder weniger</label>
+          <label class="choice"><input type="radio" name="balance" value="over10_43"> Über 10 bis einschließlich 43 Millionen Euro</label>
+          <label class="choice"><input type="radio" name="balance" value="over43"> Über 43 Millionen Euro</label>
+          <label class="choice"><input type="radio" name="balance" value="unsure"> Unsicher / weiß ich nicht</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>6. Bietet Ihr Unternehmen Waren oder Dienstleistungen an?</legend>
+          <p class="q-hint">Die sektoralen Schwellen des § 28 Abs. 1 Nr. 4 und Abs. 2 Nr. 3 BSIG knüpfen daran, dass Waren oder Dienstleistungen angeboten werden. Sonderfälle (etwa KRITIS) können unabhängig davon gelten.</p>
+          <label class="choice"><input type="radio" name="offers" value="yes" required> Ja</label>
+          <label class="choice"><input type="radio" name="offers" value="no"> Nein</label>
+          <label class="choice"><input type="radio" name="offers" value="unsure"> Unsicher / weiß ich nicht</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>7. Setzen Sie in Ihrem Unternehmen KI-Systeme ein (auch gängige Office- oder Fachanwendungen mit KI-Funktionen)?</legend>
+          <p class="q-hint">Diese Frage ändert das NIS2-Ergebnis nicht. Sie dient dem Hinweis zur KI-Kompetenz nach Art. 4 der KI-Verordnung (AI Act).</p>
+          <label class="choice"><input type="radio" name="usesAi" value="yes"> Ja</label>
+          <label class="choice"><input type="radio" name="usesAi" value="no"> Nein</label>
+          <label class="choice"><input type="radio" name="usesAi" value="unsure"> Unsicher / nicht relevant</label>
+        </fieldset>
+
+        <div class="check-actions no-print">
+          <button class="btn btn-primary btn-lg" type="submit">Ergebnis anzeigen</button>
+          <button class="btn btn-reset" type="reset" id="nis2-reset">Angaben zurücksetzen</button>
+        </div>
+      </form>
+
+      <section id="nis2-result" class="check-result" hidden aria-live="polite"></section>
+    </div>
+  </main>
+
+  <footer class="footer no-print">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html" aria-label="Oxly">
+            <svg class="logo-mark" viewBox="0 0 28 28" aria-hidden="true">
+              <rect width="28" height="28" rx="6" fill="#F6F3EC"/>
+              <rect x="6.5" y="6.5" width="15" height="15" rx="3" fill="none" stroke="#0E1A2B" stroke-width="1.6"/>
+              <path d="M10 17.2c1.1 1.3 2.5 2 4 2s2.9-.7 4-2" fill="none" stroke="#7C6228" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <span class="logo-word">Oxly</span>
+          </a>
+          <p class="disclaimer">Dieser Check und das Kit sind praktische Hilfsmittel zur Orientierung und Vorbereitung. Sie ersetzen keine individuelle Rechts- oder Compliance-Beratung.</p>
+        </div>
+        <div>
+          <h3>Oxly GmbH</h3>
+          <p>Schönenberger Str. 49<br>53783 Eitorf<br>Deutschland</p>
+          <p><a href="mailto:io@oxly.io">io@oxly.io</a></p>
+        </div>
+        <div>
+          <h3>Rechtliches</h3>
+          <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="widerruf.html">Widerruf</a>
+            <a href="lizenz.html">Lizenz</a>
+            <a href="nis2-check.html">NIS2-Check</a>
+            <a href="index.html#kontakt">Kontakt</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Oxly GmbH</span>
+        <span>NIS2 &amp; AI Act Readiness Kit</span>
+        <span>Schrift: <a href="fonts/OFL.txt">Inter, SIL OFL 1.1</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nis2-check.js"></script>
+  <script>
+    const BUY_URL = 'https://oxly.lemonsqueezy.com/checkout/buy/932510b3-8b38-464d-8cc8-acfaef03025f';
+    document.querySelectorAll('[data-buy]').forEach(function (el) {
+      el.setAttribute('href', BUY_URL);
+    });
+
+    (function () {
+      const form = document.getElementById('nis2-form');
+      const box = document.getElementById('nis2-result');
+      const resetBtn = document.getElementById('nis2-reset');
+
+      function val(name) {
+        const el = form.querySelector('[name="' + name + '"]:checked');
+        return el ? el.value : '';
+      }
+
+      function escapeHtml(s) {
+        return String(s)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      function nextSteps(level) {
+        const items = [];
+        if (level === 'bwe' || level === 'we') {
+          items.push('Prüfen Sie das Ergebnis anhand des amtlichen Wortlauts (§ 28 BSIG sowie Anlagen 1 und 2) und – bei verbundenen Unternehmen – der maßgeblichen Größenschwellen.');
+          items.push('Besonders wichtige und wichtige Einrichtungen müssen sich nach § 33 Abs. 1 BSIG spätestens drei Monate, nachdem sie erstmals oder erneut als solche gelten, beim BSI registrieren. Das BSI weist derzeit darauf hin, dass die gesetzliche Registrierungsfrist bereits abgelaufen ist und betroffene Einrichtungen sich umgehend im BSI-Portal registrieren sollen (Hinweis auf der <a href="https://www.bsi.bund.de/DE/Home/home_node.html" rel="noopener noreferrer">BSI-Startseite</a>, Einsichtnahme am 11. November 2026).');
+          items.push('Die Registrierung erfolgt zweistufig über Mein Unternehmenskonto (Organisationszertifikat, typischerweise über ELSTER) und anschließend im <a href="https://www.portal.bsi.bund.de" rel="noopener noreferrer">BSI-Portal</a>. Hinweise des BSI: <a href="https://www.bsi.bund.de/DE/Themen/Regulierte-Wirtschaft/NIS-2-regulierte-Unternehmen/BSI-Portal/bsi-portal.html" rel="noopener noreferrer">Informationen zum BSI-Portal</a>.');
+          items.push('Nutzen Sie ergänzend den offiziellen <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/NIS-2/nis-2-betroffenheit-entscheidungsbaum.pdf" rel="noopener noreferrer">Betroffenheits-Entscheidungsbaum des BSI</a> (PDF).');
+        } else if (level === 'nicht') {
+          items.push('Dokumentieren Sie kurz, warum Sie derzeit von keiner direkten Einordnung ausgehen, und prüfen Sie das erneut, wenn sich Größe, Tätigkeitsfeld oder ein Sonderfall ändern.');
+          items.push('Klären Sie, ob Kunden oder Auftraggeber vertragliche NIS2- oder Informationssicherheitsanforderungen an Sie als Lieferanten stellen.');
+          items.push('Der offizielle <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/NIS-2/nis-2-betroffenheit-entscheidungsbaum.pdf" rel="noopener noreferrer">Betroffenheits-Entscheidungsbaum des BSI</a> (PDF) kann die eigene Prüfung stützen.');
+        } else {
+          items.push('Vervollständigen Sie die offenen Angaben (Sektor, Größe, Sonderfall) und vergleichen Sie sie mit § 28 BSIG sowie den Anlagen 1 und 2.');
+          items.push('Ziehen Sie den offiziellen <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/NIS-2/nis-2-betroffenheit-entscheidungsbaum.pdf" rel="noopener noreferrer">Betroffenheits-Entscheidungsbaum des BSI</a> (PDF) heran. Wenn sich eine Betroffenheit bestätigt, gilt die Registrierung nach § 33 BSIG über das <a href="https://www.portal.bsi.bund.de" rel="noopener noreferrer">BSI-Portal</a>.');
+        }
+        return items;
+      }
+
+      function render(result) {
+        const reasons = result.reasons.map(function (r) {
+          return '<li>' + escapeHtml(r) + '</li>';
+        }).join('');
+        const steps = nextSteps(result.level).map(function (s) {
+          return '<li>' + s + '</li>';
+        }).join('');
+        const aiExtra = result.usesAi
+          ? ' Ihre Angabe, dass in Ihrem Unternehmen KI-Systeme eingesetzt werden, macht diese Pflicht besonders praktisch relevant.'
+          : ' Die Pflicht knüpft nicht an eine NIS2-Betroffenheit an.';
+        const html = ''
+          + '<p class="section-kicker">Ergebnis</p>'
+          + '<h2 class="result-title result-title--' + escapeHtml(result.level) + '">' + escapeHtml(result.title) + '</h2>'
+          + '<h3>Warum dieses Ergebnis?</h3>'
+          + '<ul>' + reasons + '</ul>'
+          + '<h3>Nächste Schritte</h3>'
+          + '<ul>' + steps + '</ul>'
+          + '<div class="result-note">'
+          + '<h3>Hinweis zum AI Act (Art. 4 – KI-Kompetenz)</h3>'
+          + '<p>Nach Art. 4 der Verordnung (EU) 2024/1689 (KI-Verordnung) müssen Anbieter und Betreiber von KI-Systemen soweit möglich Maßnahmen ergreifen, um die KI-Kompetenz ihres Personals und anderer Personen, die in ihrem Auftrag mit KI-Systemen befasst sind, zu fördern. Die ursprüngliche Verpflichtung gilt seit dem 2. Februar 2025. Sie gilt nicht für eine rein private Nutzung.' + aiExtra + ' Quelle: amtlicher Wortlaut im <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1689" rel="noopener noreferrer">Amtsblatt der EU</a>; Erläuterungen der Kommission in den <a href="https://digital-strategy.ec.europa.eu/de/faqs/ai-literacy-questions-answers" rel="noopener noreferrer">Fragen und Antworten zur KI-Kompetenz</a>.</p>'
+          + '</div>'
+          + '<div class="result-cta no-print">'
+          + '<p>Das Oxly NIS2 &amp; AI Act Readiness Kit bündelt Leitfaden, Vorlagen und einen 90-Tage-Plan als Einmalzahlung (97&nbsp;€ inkl. MwSt., kein Abo, digitaler Download).</p>'
+          + '<a class="btn btn-primary btn-lg js-buy" data-buy href="' + BUY_URL + '">Zum Readiness Kit</a>'
+          + '</div>'
+          + '<div class="result-print no-print">'
+          + '<button type="button" class="btn btn-secondary" id="nis2-print">Ergebnis drucken / als PDF speichern</button>'
+          + '<p class="q-hint">Im Druckdialog Ihres Browsers können Sie „Als PDF speichern“ wählen. Es werden nur Ihre Angaben auf dieser Seite verarbeitet, nichts wird an uns gesendet.</p>'
+          + '</div>'
+          + '<div class="result-sources">'
+          + '<h3>Quellen</h3>'
+          + '<ul>'
+          + '<li><a href="https://www.gesetze-im-internet.de/bsig_2025/__28.html" rel="noopener noreferrer">§ 28 BSIG</a> (besonders wichtige und wichtige Einrichtungen)</li>'
+          + '<li><a href="https://www.gesetze-im-internet.de/bsig_2025/__33.html" rel="noopener noreferrer">§ 33 BSIG</a> (Registrierung)</li>'
+          + '<li><a href="https://www.gesetze-im-internet.de/bsig_2025/anlage_1.html" rel="noopener noreferrer">Anlage 1 BSIG</a> und <a href="https://www.gesetze-im-internet.de/bsig_2025/anlage_2.html" rel="noopener noreferrer">Anlage 2 BSIG</a></li>'
+          + '<li><a href="https://www.bsi.bund.de/DE/Home/home_node.html" rel="noopener noreferrer">BSI-Startseite</a> (Hinweis zur abgelaufenen Registrierungsfrist, Einsichtnahme am 11. November 2026)</li>'
+          + '<li><a href="https://www.bsi.bund.de/DE/Themen/Regulierte-Wirtschaft/NIS-2-regulierte-Unternehmen/BSI-Portal/bsi-portal.html" rel="noopener noreferrer">BSI-Portal: Informationen zur Registrierung</a></li>'
+          + '<li><a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1689" rel="noopener noreferrer">Verordnung (EU) 2024/1689, Art. 4</a></li>'
+          + '</ul>'
+          + '<p class="check-disclaimer">Orientierung, keine Rechtsberatung. Das Ergebnis ersetzt keine Prüfung durch die zuständige Behörde oder rechtliche Beratung.</p>'
+          + '</div>';
+        box.innerHTML = html;
+        box.hidden = false;
+        const printBtn = document.getElementById('nis2-print');
+        if (printBtn) {
+          printBtn.addEventListener('click', function () { window.print(); });
+        }
+        document.querySelectorAll('[data-buy]').forEach(function (el) {
+          el.setAttribute('href', BUY_URL);
+        });
+        box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!val('special') || !val('sector') || !val('employees') || !val('turnover') || !val('balance') || !val('offers')) {
+          return;
+        }
+        const result = window.OxlyNis2.evaluate({
+          special: val('special'),
+          sector: val('sector'),
+          employees: val('employees'),
+          turnover: val('turnover'),
+          balance: val('balance'),
+          offers: val('offers'),
+          usesAi: val('usesAi')
+        });
+        render(result);
+      });
+
+      form.addEventListener('reset', function () {
+        box.hidden = true;
+        box.innerHTML = '';
+      });
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          box.hidden = true;
+          box.innerHTML = '';
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
