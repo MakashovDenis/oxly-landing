@@ -9,6 +9,9 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1A2B'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='16' fill='%23F6F3EC'%3EO%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="/styles.css">
   <style>
+    .legal-inner.notfound-wrap {
+      width: min(1040px, calc(100% - (var(--page-pad) * 2)));
+    }
     .notfound-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -16,6 +19,12 @@
       align-items: start;
     }
     .notfound-grid section { min-width: 0; }
+    .notfound-grid h1,
+    .notfound-grid p {
+      text-align: left;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    }
     .notfound-actions {
       display: flex;
       flex-wrap: wrap;
@@ -64,7 +73,7 @@
   </header>
 
   <main id="main" class="legal">
-    <div class="wrap legal-inner">
+    <div class="wrap legal-inner notfound-wrap">
       <div class="notfound-grid">
         <section lang="de">
           <p class="section-kicker">Fehler 404</p>
@@ -72,7 +81,7 @@
           <p>Diese Seite gibt es nicht oder sie wurde verschoben. Sie können zur Startseite zurückkehren oder den kostenlosen NIS2-Schnellcheck nutzen.</p>
           <div class="notfound-actions">
             <a class="btn btn-primary" href="/">Zur Startseite</a>
-            <a class="btn btn-ghost" href="/nis2-check.html">NIS2-Schnellcheck</a>
+            <a class="btn btn-secondary" href="/nis2-check.html">NIS2-Schnellcheck</a>
           </div>
         </section>
         <section lang="en">
@@ -81,7 +90,7 @@
           <p>This page does not exist or has been moved. You can return to the home page or use the free NIS2 quick check.</p>
           <div class="notfound-actions">
             <a class="btn btn-primary" href="/en/">Go to the home page</a>
-            <a class="btn btn-ghost" href="/en/nis2-check.html">NIS2 quick check</a>
+            <a class="btn btn-secondary" href="/en/nis2-check.html">NIS2 quick check</a>
           </div>
         </section>
       </div>
