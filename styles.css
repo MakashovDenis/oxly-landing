@@ -32,7 +32,14 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  overflow-wrap: break-word;
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -927,6 +934,10 @@ details p {
   font-weight: 450;
   margin: 0 0 22px;
 }
+.check span {
+  flex: 1;
+  min-width: 0;
+}
 .check input { margin-top: 3px; flex-shrink: 0; accent-color: var(--navy); width: 16px; height: 16px; }
 .check a:not(.btn),
 .check a:not(.btn):link,
@@ -1031,7 +1042,7 @@ details p {
 }
 .price-card .mor-note {
   margin: 18px auto 0;
-  text-align: left;
+  text-align: justify;
   max-width: 520px;
   color: var(--text-2);
 }
@@ -1352,11 +1363,12 @@ button.btn-reset:active {
   line-height: 1.5;
 }
 .choice {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  align-items: start;
   margin: 0 0 12px;
-  padding: 10px 12px;
+  padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--ivory);
@@ -1364,6 +1376,7 @@ button.btn-reset:active {
   line-height: 1.45;
   color: var(--text);
   cursor: pointer;
+  min-width: 0;
 }
 .choice:hover { border-color: var(--brass-bright); }
 .choice:has(input:checked) {
@@ -1490,4 +1503,116 @@ button.btn-reset:active {
     print-color-adjust: exact;
   }
   .check-disclaimer { border: 1px solid #ccc; }
+}
+
+
+/* Blocksatz for running prose. Headings, eyebrows, buttons, nav, prices,
+   footer columns, short labels and form controls stay start-aligned. */
+p:not(.section-kicker):not(.eyebrow):not(.price-vat):not(.price-note):not(.coming-price):not(.stand):not(.field-label):not(.waitlist-error):not(.kit-title),
+li,
+.lead,
+.hero-sub,
+.section-lead,
+.coming-lead,
+.coming-card p,
+.audience-copy p,
+.q-hint,
+.choice,
+.check span,
+.check-disclaimer,
+.template-note,
+.widerruf-box p,
+.widerruf-box li,
+details p,
+.step p,
+.waitlist-lead,
+.contact-copy p,
+.check-result p,
+.check-result li,
+.card p,
+.mor-note {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6,
+.section-kicker,
+.eyebrow,
+.logo,
+.nav,
+.btn,
+.price-amount,
+.price-vat,
+.price-note,
+.hero-price,
+.coming-price,
+.field label,
+.field-label,
+.badge-soon,
+.step-num,
+.footer p,
+.footer-links,
+.footer-bottom,
+.footer h3,
+.footer .disclaimer,
+.q legend,
+summary,
+.result-title,
+.stand,
+.kit-title,
+.kit-cover,
+input,
+select,
+textarea,
+button {
+  text-align: left;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+.price-card,
+.price-card p.price-vat,
+.price-card p.price-note {
+  text-align: center;
+}
+
+.nowrap {
+  white-space: nowrap;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+/* Long official URLs and compound words in source lists */
+.check-result a,
+.legal a,
+.result-sources li {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  p:not(.section-kicker):not(.eyebrow):not(.price-vat):not(.price-note):not(.coming-price):not(.stand):not(.field-label):not(.waitlist-error):not(.kit-title),
+  li,
+  .lead,
+  .hero-sub,
+  .q-hint,
+  .choice,
+  .check span,
+  .check-disclaimer,
+  .template-note,
+  details p,
+  .step p,
+  .check-result p,
+  .check-result li,
+  .mor-note {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-chars: 6 3 3;
+    overflow-wrap: anywhere;
+  }
 }
