@@ -10,6 +10,9 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1A2B'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='16' fill='%23F6F3EC'%3EO%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
+  <link rel="alternate" hreflang="de" href="https://oxly-compliance.de/nis2-check.html">
+  <link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/nis2-check.html">
+  <link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/nis2-check.html">
 </head>
 <body>
   <a class="skip" href="#main">Zum Inhalt springen</a>
@@ -33,7 +36,14 @@
         <a href="index.html#faq">FAQ</a>
         <a href="index.html#kontakt">Kontakt</a>
       </nav>
-      <a class="btn btn-primary js-buy" data-buy href="https://oxly.lemonsqueezy.com/checkout/buy/932510b3-8b38-464d-8cc8-acfaef03025f">Jetzt kaufen</a>
+      <div class="header-tools">
+        <nav class="lang-switch" aria-label="Sprache / Language">
+          <a href="nis2-check.html" lang="de" hreflang="de" aria-current="page">DE</a>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <a href="en/nis2-check.html" lang="en" hreflang="en">EN</a>
+        </nav>
+        <a class="btn btn-primary js-buy" data-buy href="https://oxly.lemonsqueezy.com/checkout/buy/932510b3-8b38-464d-8cc8-acfaef03025f">Jetzt kaufen</a>
+      </div>
     </div>
   </header>
 
@@ -163,124 +173,11 @@
     document.querySelectorAll('[data-buy]').forEach(function (el) {
       el.setAttribute('href', BUY_URL);
     });
-
-    (function () {
-      const form = document.getElementById('nis2-form');
-      const box = document.getElementById('nis2-result');
-      const resetBtn = document.getElementById('nis2-reset');
-
-      function val(name) {
-        const el = form.querySelector('[name="' + name + '"]:checked');
-        return el ? el.value : '';
-      }
-
-      function escapeHtml(s) {
-        return String(s)
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;');
-      }
-
-      function nextSteps(level) {
-        const items = [];
-        if (level === 'bwe' || level === 'we') {
-          items.push('Prüfen Sie das Ergebnis anhand des amtlichen Wortlauts (§ 28 BSIG sowie Anlagen 1 und 2) und – bei verbundenen Unternehmen – der maßgeblichen Größenschwellen.');
-          items.push('Besonders wichtige und wichtige Einrichtungen müssen sich nach § 33 Abs. 1 BSIG spätestens drei Monate, nachdem sie erstmals oder erneut als solche gelten, beim BSI registrieren. Das BSI weist derzeit darauf hin, dass die gesetzliche Registrierungsfrist bereits abgelaufen ist und betroffene Einrichtungen sich umgehend im BSI-Portal registrieren sollen (Hinweis auf der <a href="https://www.bsi.bund.de/DE/Home/home_node.html" rel="noopener noreferrer">BSI-Startseite</a>, Einsichtnahme am 11. November 2026).');
-          items.push('Die Registrierung erfolgt zweistufig über Mein Unternehmenskonto (Organisationszertifikat, typischerweise über ELSTER) und anschließend im <a href="https://www.portal.bsi.bund.de" rel="noopener noreferrer">BSI-Portal</a>. Hinweise des BSI: <a href="https://www.bsi.bund.de/DE/Themen/Regulierte-Wirtschaft/NIS-2-regulierte-Unternehmen/BSI-Portal/bsi-portal.html" rel="noopener noreferrer">Informationen zum BSI-Portal</a>.');
-          items.push('Nutzen Sie ergänzend den offiziellen <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/NIS-2/nis-2-betroffenheit-entscheidungsbaum.pdf" rel="noopener noreferrer">Betroffenheits-Entscheidungsbaum des BSI</a> (PDF).');
-        } else if (level === 'nicht') {
-          items.push('Dokumentieren Sie kurz, warum Sie derzeit von keiner direkten Einordnung ausgehen, und prüfen Sie das erneut, wenn sich Größe, Tätigkeitsfeld oder ein Sonderfall ändern.');
-          items.push('Klären Sie, ob Kunden oder Auftraggeber vertragliche NIS2- oder Informationssicherheitsanforderungen an Sie als Lieferanten stellen.');
-          items.push('Der offizielle <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/NIS-2/nis-2-betroffenheit-entscheidungsbaum.pdf" rel="noopener noreferrer">Betroffenheits-Entscheidungsbaum des BSI</a> (PDF) kann die eigene Prüfung stützen.');
-        } else {
-          items.push('Vervollständigen Sie die offenen Angaben (Sektor, Größe, Sonderfall) und vergleichen Sie sie mit § 28 BSIG sowie den Anlagen 1 und 2.');
-          items.push('Ziehen Sie den offiziellen <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/NIS-2/nis-2-betroffenheit-entscheidungsbaum.pdf" rel="noopener noreferrer">Betroffenheits-Entscheidungsbaum des BSI</a> (PDF) heran. Wenn sich eine Betroffenheit bestätigt, gilt die Registrierung nach § 33 BSIG über das <a href="https://www.portal.bsi.bund.de" rel="noopener noreferrer">BSI-Portal</a>.');
-        }
-        return items;
-      }
-
-      function render(result) {
-        const reasons = result.reasons.map(function (r) {
-          return '<li>' + escapeHtml(r) + '</li>';
-        }).join('');
-        const steps = nextSteps(result.level).map(function (s) {
-          return '<li>' + s + '</li>';
-        }).join('');
-        const aiExtra = result.usesAi
-          ? ' Ihre Angabe, dass in Ihrem Unternehmen KI-Systeme eingesetzt werden, macht diese Pflicht besonders praktisch relevant.'
-          : ' Die Pflicht knüpft nicht an eine NIS2-Betroffenheit an.';
-        const html = ''
-          + '<p class="section-kicker">Ergebnis</p>'
-          + '<h2 class="result-title result-title--' + escapeHtml(result.level) + '">' + escapeHtml(result.title) + '</h2>'
-          + '<h3>Warum dieses Ergebnis?</h3>'
-          + '<ul>' + reasons + '</ul>'
-          + '<h3>Nächste Schritte</h3>'
-          + '<ul>' + steps + '</ul>'
-          + '<div class="result-note">'
-          + '<h3>Hinweis zum AI Act (Art. 4 – KI-Kompetenz)</h3>'
-          + '<p>Nach Art. 4 der Verordnung (EU) 2024/1689 (KI-Verordnung) müssen Anbieter und Betreiber von KI-Systemen soweit möglich Maßnahmen ergreifen, um die KI-Kompetenz ihres Personals und anderer Personen, die in ihrem Auftrag mit KI-Systemen befasst sind, zu fördern. Die ursprüngliche Verpflichtung gilt seit dem 2. Februar 2025. Sie gilt nicht für eine rein private Nutzung.' + aiExtra + ' Quelle: amtlicher Wortlaut im <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1689" rel="noopener noreferrer">Amtsblatt der EU</a>; Erläuterungen der Kommission in den <a href="https://digital-strategy.ec.europa.eu/de/faqs/ai-literacy-questions-answers" rel="noopener noreferrer">Fragen und Antworten zur KI-Kompetenz</a>.</p>'
-          + '</div>'
-          + '<div class="result-cta no-print">'
-          + '<p>Das Oxly NIS2 &amp; AI Act Readiness Kit bündelt Leitfaden, Vorlagen und einen 90-Tage-Plan als Einmalzahlung (97&nbsp;€ inkl. MwSt., kein Abo, digitaler Download).</p>'
-          + '<a class="btn btn-primary btn-lg js-buy" data-buy href="' + BUY_URL + '">Zum Readiness Kit</a>'
-          + '</div>'
-          + '<div class="result-print no-print">'
-          + '<button type="button" class="btn btn-secondary" id="nis2-print">Ergebnis drucken / als PDF speichern</button>'
-          + '<p class="q-hint">Im Druckdialog Ihres Browsers können Sie „Als PDF speichern“ wählen. Es werden nur Ihre Angaben auf dieser Seite verarbeitet, nichts wird an uns gesendet.</p>'
-          + '</div>'
-          + '<div class="result-sources">'
-          + '<h3>Quellen</h3>'
-          + '<ul>'
-          + '<li><a href="https://www.gesetze-im-internet.de/bsig_2025/__28.html" rel="noopener noreferrer">§ 28 BSIG</a> (besonders wichtige und wichtige Einrichtungen)</li>'
-          + '<li><a href="https://www.gesetze-im-internet.de/bsig_2025/__33.html" rel="noopener noreferrer">§ 33 BSIG</a> (Registrierung)</li>'
-          + '<li><a href="https://www.gesetze-im-internet.de/bsig_2025/anlage_1.html" rel="noopener noreferrer">Anlage 1 BSIG</a> und <a href="https://www.gesetze-im-internet.de/bsig_2025/anlage_2.html" rel="noopener noreferrer">Anlage 2 BSIG</a></li>'
-          + '<li><a href="https://www.bsi.bund.de/DE/Home/home_node.html" rel="noopener noreferrer">BSI-Startseite</a> (Hinweis zur abgelaufenen Registrierungsfrist, Einsichtnahme am 11. November 2026)</li>'
-          + '<li><a href="https://www.bsi.bund.de/DE/Themen/Regulierte-Wirtschaft/NIS-2-regulierte-Unternehmen/BSI-Portal/bsi-portal.html" rel="noopener noreferrer">BSI-Portal: Informationen zur Registrierung</a></li>'
-          + '<li><a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1689" rel="noopener noreferrer">Verordnung (EU) 2024/1689, Art. 4</a></li>'
-          + '</ul>'
-          + '<p class="check-disclaimer">Orientierung, keine Rechtsberatung. Das Ergebnis ersetzt keine Prüfung durch die zuständige Behörde oder rechtliche Beratung.</p>'
-          + '</div>';
-        box.innerHTML = html;
-        box.hidden = false;
-        const printBtn = document.getElementById('nis2-print');
-        if (printBtn) {
-          printBtn.addEventListener('click', function () { window.print(); });
-        }
-        document.querySelectorAll('[data-buy]').forEach(function (el) {
-          el.setAttribute('href', BUY_URL);
-        });
-        box.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (!val('special') || !val('sector') || !val('employees') || !val('turnover') || !val('balance') || !val('offers')) {
-          return;
-        }
-        const result = window.OxlyNis2.evaluate({
-          special: val('special'),
-          sector: val('sector'),
-          employees: val('employees'),
-          turnover: val('turnover'),
-          balance: val('balance'),
-          offers: val('offers'),
-          usesAi: val('usesAi')
-        });
-        render(result);
-      });
-
-      form.addEventListener('reset', function () {
-        box.hidden = true;
-        box.innerHTML = '';
-      });
-      if (resetBtn) {
-        resetBtn.addEventListener('click', function () {
-          box.hidden = true;
-          box.innerHTML = '';
-        });
-      }
-    })();
+    document.querySelectorAll('.lang-switch a').forEach(function (el) {
+      var href = el.getAttribute('href');
+      if (href && location.hash) el.setAttribute('href', href.split('#')[0] + location.hash);
+    });
+    OxlyNis2.bindForm({ lang: 'de', buyUrl: BUY_URL });
   </script>
 </body>
 </html>
