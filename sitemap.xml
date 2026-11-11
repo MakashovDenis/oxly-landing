@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://oxly-compliance.de/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/en/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/nis2-check.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/nis2-check.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/nis2-check.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/nis2-check.html"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/en/nis2-check.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/nis2-check.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/nis2-check.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/nis2-check.html"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/impressum.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/en/imprint.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/datenschutz.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/datenschutz.html"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/en/privacy.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/datenschutz.html"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/widerruf.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/widerruf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/widerruf.html"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/en/withdrawal.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/widerruf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/widerruf.html"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/lizenz.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/lizenz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/license.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/lizenz.html"/>
+  </url>
+  <url>
+    <loc>https://oxly-compliance.de/en/license.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oxly-compliance.de/lizenz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oxly-compliance.de/en/license.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oxly-compliance.de/lizenz.html"/>
+  </url>
+</urlset>
